@@ -56,7 +56,7 @@ def download_indices(sheet_id):
     # Disable images
     prefs = {"profile.managed_default_content_settings.images": 2}
     options.add_experimental_option("prefs", prefs)
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), Options=Options)
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options =options)
     # driver = webdriver.Chrome(service=Service(ChromeDriverManager(driver_version="137.0.7151.40").install()), options=options)
     driver.get('https://www.sharesansar.com/index-history-data')
     # Set date range
